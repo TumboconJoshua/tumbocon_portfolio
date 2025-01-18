@@ -60,6 +60,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding: 10px;
 
 }
 
@@ -123,6 +124,55 @@ body {
     100% {
         background-image: url('pictures/skillsync1.png');
         background-position: left center;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* Tablets and smaller screens */
+    .ventures {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px;
+    }
+
+    .venture {
+        padding: 15px; /* Slightly reduce padding for smaller screens */
+    }
+
+    .venture h3 {
+        font-size: 1.3em; /* Adjust heading size */
+    }
+
+    .venture p {
+        font-size: 0.85em; /* Adjust paragraph size */
+    }
+
+    .venture img {
+        width: 40px; /* Scale down image size */
+        height: 40px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) { /* Very small devices like smartphones */
+    .ventures {
+        padding: 5px; /* Reduce outer padding */
+    }
+
+    .venture {
+        padding: 10px;
+    }
+
+    .venture h3 {
+        font-size: 1.1em;
+    }
+
+    .venture p {
+        font-size: 0.8em;
+    }
+
+    .venture img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -354,6 +404,7 @@ body {
     padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Required for positioning the background logo */
 }
 
 .tool-item h3 {
@@ -372,6 +423,66 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(50, 150, 250, 0.5);
 }
+
+/* Add background logos for each tool */
+.tool-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Position on the right side */
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1; /* Make it semi-transparent */
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Background logos for specific tools */
+.tool-item.vscode::after {
+    background-image: url('pictures/vscode.png'); /* Replace with your logo path */
+}
+
+.tool-item.github::after {
+    background: whitesmoke; /* Change this to the desired color */
+    -webkit-mask: url('pictures/github.png') no-repeat center;
+    mask: url('pictures/github.png') no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-image: url('pictures/github.png'); /* Replace with your logo path */
+}
+
+.tool-item.postman::after {
+    background-image: url('pictures/postman.svg'); /* Replace with your logo path */
+}
+
+.tool-item.devtools::after {
+    background-image: url('pictures/devtools.png'); /* Replace with your logo path */
+}
+
+.tool-item.chatgpt::after {
+    background-image: url('pictures/chatgpt.png'); /* Replace with your logo path */
+}
+
+.tool-item.deepseek::after {
+    background: rgb(81, 81, 216); /* Change this to the desired color */
+    -webkit-mask: url('pictures/deepseek.png') no-repeat center;
+    mask: url('pictures/deepseek.png') no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-image: url('pictures/deepseek.png'); /* Replace with your logo path */
+}
+
+.tool-item.figma::after {
+    background-image: url('pictures/figma.png'); /* Replace with your logo path */
+}
+
+.tool-item.trello::after {
+    background-image: url('pictures/trello.png'); /* Replace with your logo path */
+}
+
+
 
 /* Footer Styling */
 .footer {

@@ -1,0 +1,493 @@
+body {
+    margin: 0;
+    font-family: Arial , sans-serif;
+    background-color: #000;
+    color: #fff;
+
+     background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+     background-size: 100px 100px; /* Size of the dots */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.header p {
+    color: #aaa;
+    font-size: 1.2em;
+}
+
+.header .get-in-touch {
+    margin-top: 20px;
+    display: flex;
+}
+
+.header .get-in-touch button  {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+   
+}
+
+
+.ventures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+.venture {
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+    height: 140px;
+    overflow: hidden;
+    
+
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit; /* Inherit the text color */
+}
+
+.venture:hover {
+    transform: scale(1.05);             /* Slightly enlarge the element */
+    background-color: rgba(244, 244, 244, 0.3);  /* Highlight with a soft yellow background */
+    color: #000;                        /* Change text color to black (or another contrasting color) */
+    border: 2px solid #ffffff;          /* Add a gold border for extra highlight */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for a glowing effect */
+    transition: all 0.3s ease;          /* Smooth transition for all changes */
+}
+
+.venture h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color:azure;
+}
+
+.venture p {
+    color: #aaa;
+}
+
+.venture img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Slideshow animation */
+@keyframes slideshow {
+    0% {
+        background-image: url('pictures/skillsync1.png');
+        background-position: left center;
+    }
+    33% {
+        background-image: url('pictures/skillsync3.png');
+        background-position: center center;
+    }
+    66% {
+        background-image: url('pictures/skillsync2.png');
+        background-position: right center;
+    }
+    100% {
+        background-image: url('pictures/skillsync1.png');
+        background-position: left center;
+    }
+}
+
+.slideshow-venture {
+    display: flex;
+    align-items: flex-start;
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow-venture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    width: 40%; /* Slideshow occupies 40% of the container */
+    height: 100%;
+    opacity: 0.2; /* Adjust the visibility */
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 9s infinite; /* Slideshow animation */
+}
+
+/* Blur the edges of the slideshow */
+.slideshow-venture::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; /* Match the slideshow width */
+    height: 100%;
+    border-radius: 10px; /* Rounded corners */
+    pointer-events: none;
+    z-index: -1; /* Ensures this overlay sits above the slideshow */
+    background: linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 0) 20%, 
+        rgba(0, 0, 0, 0) 80%, 
+        rgba(0, 0, 0, 1) 100%
+    );
+}
+
+
+/* Other venture styles */
+.slideshow-venture img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.slideshow-venture .text-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slideshow-venture h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: azure;
+    margin: 0;
+}
+
+.slideshow-venture p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+
+.coming-soon {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.name {
+    color: white;
+    font-weight: 100;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+#contactButton {
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Button hover effect */
+#contactButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 items per row */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-item:hover {
+    transform: scale(1.05); /* Slight scale-up effect */
+    background-color: #1e1e1e; /* Darker background on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(50, 150, 250, 0.7); /* Add shadow and glow */
+}
+
+/* Add glowing edge effect */
+.tech-item:hover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(50, 150, 250, 0.25), transparent 80%);
+    animation: rotateGlow 2s linear infinite; /* Create a rotating glow effect */
+    z-index: 1; /* Behind the content */
+}
+
+/* Ensure content is above the glowing effect */
+.tech-item > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Rotation animation for the glowing effect */
+@keyframes rotateGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.tech-item h3 {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.tech-intro {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* Web Development Tools Section */
+.web-tools {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.web-tools h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.web-tools p {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tool-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tool-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.tool-item p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Hover effect for tool items */
+.tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(50, 150, 250, 0.5);
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    color: #aaa;
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #5baaff;
+}
+
+.footer-time {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.footer-credits {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.footer-copyright a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-copyright a:hover {
+    color: #5baaff;
+}
+
+/* Project Showcase Section */
+.project-showcase {
+    text-align: center;
+    margin: 4rem 0;
+    color: #fff;
+}
+
+.project-showcase h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-showcase p {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.project-showcase-container {
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+}
+
+.project-slider {
+    display: flex;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    padding: 20px;
+}
+
+.project-card {
+    flex: 0 0 100%;
+    background: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #fff;
+}
+
+/* Add styling for infinite loop */
+.project-slider {
+    animation: slide 20s infinite linear;
+}
+
+/* Keyframe animation for looping effect */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+
+

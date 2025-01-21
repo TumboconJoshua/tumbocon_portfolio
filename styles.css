@@ -636,5 +636,13 @@ body {
     }
 }
 
+.footer-links img.icon {
+    
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    filter: invert(1);
+}
+
 
 

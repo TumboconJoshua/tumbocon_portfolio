@@ -644,5 +644,11 @@ body {
     filter: invert(1);
 }
 
+.footer-links img.icon:hover {
+    transform: scale(1.25);             /* Slightly enlarge the element */
+    background-color: rgba(244, 244, 244, 0.3);  /* Highlight with a soft yellow background */
+    transition: all 0.3s ease;  
+}
+
 
 

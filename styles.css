@@ -645,10 +645,92 @@ body {
 }
 
 .footer-links img.icon:hover {
-    transform: scale(1.25);             /* Slightly enlarge the element */
-    background-color: rgba(244, 244, 244, 0.3);  /* Highlight with a soft yellow background */
+    transform: scale(1.25);            
+    background-color: rgba(244, 244, 244, 0.3);  
     transition: all 0.3s ease;  
 }
 
+
+/* Blog Section */
+.blog-section {
+    text-align: center;
+    padding: 30px 0; /* Reduced padding */
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    width: 100%; /* Slightly smaller */
+    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: start;
+    cursor: grab;
+    padding: 10px 0;
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    cursor: grab;
+    
+
+}
+
+/* Timeline Track */
+.timeline {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    min-width: max-content;
+   
+}
+
+/* Timeline Item */
+.timeline-item {
+    flex: 0 0 400px; /* Smaller card size */
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(50, 150, 250, 0.5);
+    transition: all 0.3s ease;  
+}
+
+/* Timeline Content */
+.timeline-content img,
+.timeline-content video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.timeline-content h3 {
+    margin-top: 8px;
+    font-size: 1em; /* Smaller font */
+}
+
+.timeline-content p {
+    margin-top: 4px;
+    font-size: 0.85em; /* Smaller text */
+    color: #bbb;
+}
+
+/* Hidden Scrollbar */
+.timeline-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex: 0 0 180px; /* Even smaller for mobile */
+    }
+}
 
 

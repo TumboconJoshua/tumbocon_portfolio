@@ -95,6 +95,72 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".timeline-container");
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+    let velocity = 0;
+    let momentumID;
+
+    container.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        container.classList.add("active");
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+        velocity = 0;
+
+        // Disable text selection while dragging
+        document.body.style.userSelect = "none";
+
+        // Stop momentum scrolling if active
+        cancelAnimationFrame(momentumID);
+    });
+
+    container.addEventListener("mouseup", () => {
+        isDragging = false;
+        container.classList.remove("active");
+
+        // Re-enable text selection after dragging
+        document.body.style.userSelect = "auto";
+
+        // Apply momentum scrolling
+        momentumScroll();
+    });
+
+    container.addEventListener("mouseleave", () => {
+        isDragging = false;
+        container.classList.remove("active");
+
+        // Apply momentum scrolling if the mouse leaves
+        momentumScroll();
+    });
+
+    container.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust speed multiplier
+        container.scrollLeft = scrollLeft - walk;
+
+        // Store velocity for momentum effect
+        velocity = walk;
+    });
+
+    // Smooth momentum scrolling
+    function momentumScroll() {
+        if (Math.abs(velocity) < 0.5) return; // Stop when speed is very low
+        container.scrollLeft -= velocity;
+        velocity *= 0.25; 
+        momentumID = requestAnimationFrame(momentumScroll);
+    }
+});
+
+
+
+
+
+
 
 
 

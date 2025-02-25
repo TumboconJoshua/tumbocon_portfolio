@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isDragging) return;
         e.preventDefault();
         const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust speed multiplier
+        const walk = (x - startX) * 0.2; // Adjust speed multiplier
         container.scrollLeft = scrollLeft - walk;
 
         // Store velocity for momentum effect
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function momentumScroll() {
         if (Math.abs(velocity) < 0.5) return; // Stop when speed is very low
         container.scrollLeft -= velocity;
-        velocity *= 0.25; 
+        velocity *= 0.95; 
         momentumID = requestAnimationFrame(momentumScroll);
     }
 });

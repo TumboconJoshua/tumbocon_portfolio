@@ -595,6 +595,21 @@ body {
 }
 
 
+@keyframes fontChange {
+    0% { font-family: 'Arial', sans-serif; }
+    25% { font-family: 'Courier New', monospace; }
+    50% { font-family: 'Georgia', serif; }
+    75% { font-family: 'Impact', sans-serif; }
+    100% { font-family: 'Arial', sans-serif; } /* Loop back */
+}
+
+.changing-font {
+    display: inline-block; /* Keeps it in line with text */
+    width: auto; /* Allows natural width */
+    height: auto; /* Ensures it doesn't affect line height */
+    vertical-align: baseline; /* Aligns it properly with surrounding text */
+    transition: font-family 0.5s ease-in-out;
+}
 
 /* Footer Styling */
 .footer {

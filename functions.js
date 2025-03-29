@@ -156,6 +156,100 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const toolItems = document.querySelectorAll(".tool-item");
+
+    toolItems.forEach(item => {
+        const title = item.querySelector("h3");
+        if (!title) return; // Skip if no h3 found
+
+        const originalText = title.innerText;
+        const chars = ",.<>?/</>!@#$%^&*()_+-=[]{}|;:'";
+
+        item.addEventListener("mouseenter", () => {
+            let iterations = 0;
+            const scrambleInterval = setInterval(() => {
+                title.innerText = title.innerText
+                    .split("")
+                    .map((char, index) => {
+                        if (index < iterations) {
+                            return originalText[index]; // Keep the correct letter after scrambling
+                        }
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join("");
+
+                if (iterations >= originalText.length) {
+                    clearInterval(scrambleInterval);
+                }
+
+                iterations += 1 / 2; // Controls the speed of unscrambling
+            }, 20);
+        });
+
+        item.addEventListener("mouseleave", () => {
+            title.innerText = originalText; // Restore original text when not hovering
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".tool-item, .tech-item"); // Select both tool and tech items
+
+    items.forEach(item => {
+        const title = item.querySelector("h3");
+        if (!title) return; // Skip if no h3 found
+
+        const originalText = title.innerText;
+        const chars = "0123456789!@#$%^&*()_+-=[]{}|;:'\",.<>?/";
+
+        item.addEventListener("mouseenter", () => {
+            let iterations = 0;
+            const scrambleInterval = setInterval(() => {
+                title.innerText = title.innerText
+                    .split("")
+                    .map((char, index) => {
+                        if (index < iterations) {
+                            return originalText[index]; // Keep the correct letter after scrambling
+                        }
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join("");
+
+                if (iterations >= originalText.length) {
+                    clearInterval(scrambleInterval);
+                }
+
+                iterations += 1 / 2; // Controls the speed of unscrambling
+            }, 30);
+        });
+
+        item.addEventListener("mouseleave", () => {
+            title.innerText = originalText; // Restore original text when not hovering
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const webDevText = document.querySelector(".changing-font");
+    const fonts = ["Arial", "Courier New", "Georgia", "Impact", "Times New Roman", "Verdana"];
+
+    // Set a fixed space so the div doesn’t move
+    webDevText.style.display = "inline-block";
+    webDevText.style.width = "150px"; // Adjust based on font sizes
+
+
+    webDevText.addEventListener("mouseenter", () => {
+        const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+        webDevText.style.fontFamily = randomFont;
+    });
+});
+
+
+
+
+
+
 
 
 

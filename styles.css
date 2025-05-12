@@ -769,82 +769,78 @@ body {
 /* Blog Section */
 .blog-section {
     text-align: center;
-    padding: 30px 0; /* Reduced padding */
+    padding: 30px 0;
 }
 
-/* Timeline Container */
+/* Timeline Container (Vertical now) */
 .timeline-container {
-    position: relative;
-    width: 100%; /* Slightly smaller */
+    width: 100%;
+    max-width: 1200px; /* Increased width */
     margin: auto;
-    overflow-x: auto;
-    white-space: nowrap;
     display: flex;
-    justify-content: start;
-    cursor: grab;
-    padding: 10px 0;
-    user-select: none; /* Disable text selection */
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE/Edge */
-    cursor: grab;
-    
-
+    flex-direction: column;
+    gap: 40px; /* More spacing between items */
+    padding: 20px 40px; /* More side padding */
 }
 
-/* Timeline Track */
+
+/* Timeline Track no longer needed for horizontal scrolling */
 .timeline {
     display: flex;
-    gap: 20px;
-    padding: 10px;
-    min-width: max-content;
-   
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* Timeline Item */
 .timeline-item {
-    flex: 0 0 400px; /* Smaller card size */
     background: #222;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     position: relative;
-    text-align: center;
-    
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .timeline-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(50, 150, 250, 0.5);
-    transition: all 0.3s ease;  
 }
 
-/* Timeline Content */
-.timeline-content img,
+/* Video Content Styling */
 .timeline-content video {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 600px; /* Increased height */
 }
 
+
+/* Content Below Video */
 .timeline-content h3 {
-    margin-top: 8px;
-    font-size: 1em; /* Smaller font */
+    margin-top: 15px;
+    font-size: 1.25rem;
+    color: #fff;
 }
 
 .timeline-content p {
-    margin-top: 4px;
-    font-size: 0.85em; /* Smaller text */
+    margin-top: 8px;
+    font-size: 1rem;
     color: #bbb;
 }
 
-/* Hidden Scrollbar */
-.timeline-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Responsive Adjustments */
+/* Responsive */
 @media screen and (max-width: 768px) {
-    .timeline-item {
-        flex: 0 0 180px; /* Even smaller for mobile */
+    .timeline-container {
+        padding: 10px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
     }
 }
 

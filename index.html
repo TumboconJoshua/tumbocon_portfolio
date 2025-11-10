@@ -14,20 +14,20 @@
         <div class="header">
             <div class="header-content">
                 <img src="pictures/joshua.jpg" alt="Profile Picture" class="profile-pic">
-                <div>
-                    <p class="name">I'm Joshua Tumbocon,<p>
-                    <h1>Full Stack Developer</h1>
-                    <p>A passionate Developer dedicated to creating performant and scalable web applications.</p>
-                    
-                </div>
-            </div>
-            <div class="buttons_container">
-                <div class="get-in-touch">
-                        <button id="contactButton"><b>Contact Me</b></button>
-                </div>
-                <!-- Button to download resume -->
-                <div class="get-in-touch">
-                    <button  id="downloadButton"><b>Download Resume</b></button>
+                <div class="header-info">
+                    <div class="name-section">
+                        <h1 class="header-name">Joshua Tumbocon</h1>
+                        <p class="header-subtitle">Full Stack Developer</p>
+                        <p class="header-description">A passionate Developer dedicated to creating performant and scalable web applications.</p>
+                    </div>
+                    <div class="header-buttons">
+                        <button id="contactButton" class="header-btn primary-btn">
+                            <span>Contact Me</span>
+                        </button>
+                        <button id="downloadButton" class="header-btn secondary-btn">
+                            <span>Download Resume</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,6 +72,30 @@
                             <div class="experience-date">July 2022 - July 2022</div>
                         </div>
                     </div>
+
+                    <div class="experience-item">
+                        <div class="experience-node"></div>
+                        <div class="experience-content">
+                            <div class="experience-header">
+                                <h3>BSIT - Bachelor of Science in Information Technology</h3>
+                                <span class="experience-type">Education</span>
+                            </div>
+                            <div class="experience-company">Gordon College</div>
+                            <div class="experience-date">2021</div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-node"></div>
+                        <div class="experience-content">
+                            <div class="experience-header">
+                                <h3>Hello World! 👋</h3>
+                                <span class="experience-type">Learning</span>
+                            </div>
+                            <div class="experience-company">Wrote my first code</div>
+                            <div class="experience-date">2021</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,27 +105,29 @@
             <h2>Latest Projects</h2>
             <div class="ventures">
                 <a href="https://skillsync.cloud" class="venture slideshow-venture" target="_blank">
-                    <img src="pictures/skillsyncph.png" alt="SkillSync Project" onerror="this.style.display='none'">
                     <div class="text-content">
                         <h3>SkillSync</h3>
-                        <p><strong>Project Manager & Lead Developer</strong> | July 2024 - December 2024</p>
-                     <p class="tech-tags">Laravel PHP, ReactJS, Bootstrap, MySQL, Hostinger</p>
+                        <div class="project-info">
+                            <p class="tech-tags">Laravel PHP, ReactJS, Bootstrap, MySQL, Hostinger</p>
+                        </div>
                     </div>
                 </a>
                 
                 <a href="#" class="venture" target="_blank">
                     <div class="text-content">
                         <h3>AcadMark: A Student Academic Records System</h3>
-                        <p><strong>Project Manager & Lead Developer</strong> | April 2025 - June 2025</p>
-                        <p class="tech-tags">Laravel PHP, VueJS, Tailwind-CSS, MySQL</p>
+                        <div class="project-info">
+                            <p class="tech-tags">Laravel PHP, VueJS, Tailwind-CSS, MySQL</p>
+                        </div>
                     </div>
                 </a>
                 
                 <a href="#" class="venture" target="_blank">
                     <div class="text-content">
                         <h3>AcadBase: A Student Academic Remarks Archiving System</h3>
-                        <p><strong>Project Manager & Lead Developer</strong> | April 2025 - June 2025</p>
-                        <p class="tech-tags">Laravel PHP, VueJS, Tailwind-CSS, MySQL</p>
+                        <div class="project-info">
+                            <p class="tech-tags">Laravel PHP, VueJS, Tailwind-CSS, MySQL</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -111,54 +137,55 @@
         <br><br><br><br><br><br><br><br>
         <section>
             <h2>Tech Stack</h2>
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <img src="pictures/html.png" alt="Html Icon">
-                    <h3>HTML</h3>
+            <div class="tech-stack-container">
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Frontend</h3>
+                    <div class="tech-buttons">
+                        <span class="tech-button">HTML</span>
+                        <span class="tech-button">CSS</span>
+                        <span class="tech-button">JavaScript</span>
+                        <span class="tech-button">TypeScript</span>
+                        <span class="tech-button">React.js</span>
+                        <span class="tech-button">Vue.js</span>
+                        <span class="tech-button">Angular.js</span>
+                        <span class="tech-button">Tailwind CSS</span>
+                        <span class="tech-button">Vite</span>
+                        <span class="tech-button">Prettier</span>
+                        <span class="tech-button">ESLint</span>
+                    </div>
                 </div>
-                <div class="tech-item">
-                    <img src="pictures/css.png" alt="Css Icon">
-                    <h3>CSS</h3>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Backend</h3>
+                    <div class="tech-buttons">
+                        <span class="tech-button">PHP</span>
+                        <span class="tech-button">Python</span>
+                        <span class="tech-button">Java</span>
+                        <span class="tech-button">Node.js</span>
+                        <span class="tech-button">Laravel</span>
+                        <span class="tech-button">Express.js</span>
+                        <span class="tech-button">OAuth</span>
+                        <span class="tech-button">JWT</span>
+                        <span class="tech-button">REST</span>
+                    </div>
                 </div>
-                <div class="tech-item">
-                    <img src="pictures/JavaScript-logo.png" alt="JavaScript Icon">
-                    <h3>JavaScript</h3>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Database</h3>
+                    <div class="tech-buttons">
+                        <span class="tech-button">MySQL</span>
+                        <span class="tech-button">MongoDB</span>
+                        <span class="tech-button">PostgreSQL</span>
+                    </div>
                 </div>
-                <div class="tech-item">
-                    <img src="pictures/php.png" alt="Php Icon">
-                    <h3>PHP</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/python.png" alt="Php Icon">
-                    <h3>Python</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/java-logo-vector-1.svg" alt="Php Icon">
-                    <h3>Java</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/MySQL-Logo.svg" alt="Mysql Icon">
-                    <h3>MySQL</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/laravel.png" alt="Laravel Icon">
-                    <h3>Laravel</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/Vue.png" alt="Vue.js Icon">
-                    <h3>Vue.js</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/react.png" alt="React.js Icon">
-                    <h3>React.js</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/node.png" alt="Nodejs Icon">
-                    <h3>Node.js</h3>
-                </div>
-                <div class="tech-item">
-                    <img src="pictures/AngularJS-Shield.svg" alt="Nodejs Icon">
-                    <h3>Angular.js</h3>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">AI & Machine Learning</h3>
+                    <div class="tech-buttons">
+                        <span class="tech-button">OpenAI</span>
+                        <span class="tech-button">Anthropic</span>
+                        <span class="tech-button">Gemini</span>
+                    </div>
                 </div>
             </div>
         </section>

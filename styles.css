@@ -243,6 +243,11 @@ section {
     margin-top: 40px;
 }
 
+/* Add extra spacing for Latest Projects section (second section) */
+section:nth-of-type(2) {
+    margin-top: 100px;
+}
+
 .experience-container {
     padding: 20px 10px;
     position: relative;

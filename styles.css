@@ -114,23 +114,6 @@ body {
 
 .experience-timeline {
     position: relative;
-    padding-left: 60px; /* Space for nodes and line */
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    overflow: visible; /* Allow nodes to be visible */
-}
-
-/* Vertical line for the timeline */
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    left: 10px; /* Line center at 11px (10px + 1px for 2px width) */
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #333, #333);
-    z-index: 1;
 }
 
 .experience-item {
@@ -140,7 +123,7 @@ body {
     padding: 25px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    margin-left: 20px; /* Space from the timeline */
+    margin-bottom: 20px; /* Space between items */
     overflow: visible; /* Allow nodes to be visible outside card */
 }
 
@@ -148,16 +131,29 @@ body {
     transform: translateY(-5px);
     background-color: rgba(255, 69, 0, 0.05);
     box-shadow: 0 8px 20px rgba(255, 69, 0, 0.2);
+    z-index: 20;
 }
 
 .experience-item:last-child {
     margin-bottom: 0;
 }
 
-/* Timeline node - Circular design - positioned outside cards */
+/* Vertical line for the timeline - positioned to pass through node centers */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: -21px; /* Aligns line center with node center at -20px */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(255, 69, 0, 0.3), rgba(255, 69, 0, 0.3));
+    z-index: 1;
+}
+
+/* Timeline node - Circular design - positioned to be part of the line */
 .experience-node {
     position: absolute;
-    left: -9px; /* Line center (11px) - card margin (20px) = -9px relative to card */
+    left: -20px; /* Center aligns with line center */
     top: 50%;
     transform: translate(-50%, -50%);
     width: 16px;
@@ -165,7 +161,7 @@ body {
     border-radius: 50%;
     background-color: #121212;
     border: 3px solid #ff4500;
-    z-index: 20;
+    z-index: 5; /* Above the line */
     box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
     transition: all 0.3s ease;
 }
@@ -228,23 +224,22 @@ body {
 /* Responsive styles for experience section */
 @media (max-width: 768px) {
     .experience-timeline {
-        padding-left: 45px;
-        gap: 20px;
-    }
-    
-    .experience-timeline::before {
-        left: 10px; /* Position so center is at 11px (10px + 1px for 2px width) */
+        padding-left: 35px;
     }
     
     .experience-item {
         padding: 20px;
-        margin-left: 10px;
     }
     
     .experience-node {
-        left: 1px; /* Line center relative to card (11px line center - 10px card margin) */
+        left: -18px; /* Slightly closer for smaller screens */
         width: 14px;
         height: 14px;
+    }
+    
+    /* Line positioned to pass through node centers */
+    .experience-timeline::before {
+        left: -19px; /* Aligns line center with node center at -18px */
     }
     
     .experience-header {
@@ -258,6 +253,30 @@ body {
     
     .experience-content {
         padding: 0;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .experience-timeline {
+        padding-left: 30px;
+    }
+    
+    .experience-item {
+        padding: 15px;
+    }
+    
+    .experience-node {
+        left: -16px; /* Closer for mobile */
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+    }
+    
+    /* Line positioned to pass through node centers */
+    .experience-timeline::before {
+        left: -17px; /* Aligns line center with node center at -16px */
+        width: 2px;
     }
 }
 

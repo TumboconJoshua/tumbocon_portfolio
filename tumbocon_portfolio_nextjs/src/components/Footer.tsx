@@ -29,18 +29,17 @@ export default function Footer() {
       <div className="flex flex-col gap-6 pt-4">
         {/* CTA Card */}
         <div
-          className="card p-10 sm:p-14 flex flex-col items-center text-center gap-6"
-          style={{ borderColor: 'var(--border)' }}
+          className="bg-white dark:bg-[#111111] border border-black/5 dark:border-white/7 rounded-[1.25rem] p-10 sm:p-14 flex flex-col items-center text-center gap-6 transition-all hover:border-black/10 dark:hover:bg-[#161616] dark:hover:border-white/14 shadow-sm dark:shadow-none"
         >
-          <p style={{ color: 'var(--text-muted)' }} className="text-xs font-bold tracking-widest uppercase">
+          <p className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-gray-500 dark:text-[#555555]">
             Let&apos;s Work Together
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white max-w-xl leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white max-w-xl leading-tight">
             Have a project in mind? Let&apos;s build it together.
           </h2>
           <a
             href="mailto:tumboconjoshua26@gmail.com"
-            className="px-8 py-3 rounded-full text-sm font-bold bg-white text-black hover:bg-[#ff4500] hover:text-white transition-colors duration-200 mt-2"
+            className="px-8 py-3 rounded-full text-sm font-bold bg-gray-900 text-white dark:bg-white dark:text-black hover:bg-[#ff4500] dark:hover:bg-[#ff4500] dark:hover:text-white transition-colors duration-200 mt-2 shadow-sm"
           >
             Get in touch
           </a>
@@ -48,14 +47,17 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 pb-8"
-          style={{ borderTop: '1px solid var(--border)' }}
+          className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 pb-8 border-t border-black/5 dark:border-white/7"
         >
           <div className="flex flex-col gap-1 text-center sm:text-left">
-            <span style={{ color: 'var(--text-muted)' }} className="text-xs">
-              Local time · <span style={{ color: 'var(--text-secondary)' }}>{time}</span>
+            <span className="text-xs text-gray-500 dark:text-[#555555]">
+              Local time · <span className="text-gray-600 dark:text-[#888888]">{time}</span>
             </span>
           </div>
+
+          <span className="text-[0.65rem] font-medium text-gray-500 dark:text-[#555555] text-center sm:text-center">
+            © 2026 Joshua Tumbocon. All Rights Reserved.
+          </span>
 
           <div className="flex items-center justify-center gap-5">
             {socialLinks.map((link, i) => (
@@ -65,7 +67,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title={link.label}
-                className="relative w-5 h-5 opacity-40 hover:opacity-100 hover:scale-110 transition-all duration-200 invert"
+                className="relative w-5 h-5 opacity-40 hover:opacity-100 hover:scale-110 transition-all duration-200 dark:invert"
               >
                 <Image
                   src={link.icon}
@@ -76,12 +78,9 @@ export default function Footer() {
               </a>
             ))}
           </div>
-
-          <span style={{ color: 'var(--text-muted)' }} className="text-xs text-right">
-            © 2026 Joshua Tumbocon. All Rights Reserved.
-          </span>
         </div>
       </div>
     </AnimatedSection>
   );
 }
+

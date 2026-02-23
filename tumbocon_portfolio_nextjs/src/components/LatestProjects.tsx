@@ -23,7 +23,7 @@ export default function LatestProjects() {
                 className="bg-white dark:bg-[#111111] border border-black/5 dark:border-white/7 rounded-[1.25rem] p-6 flex flex-col justify-between gap-4 group min-h-[120px] transition-all duration-200 hover:bg-gray-50 dark:hover:bg-[#161616] hover:border-black/10 dark:hover:border-white/14 shadow-sm dark:shadow-none"
               >
                 <div className="flex flex-col gap-1">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-[#ff4500] transition-colors duration-200">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-[#ff4500] dark:group-hover:text-[#ff4500] transition-colors duration-200">
                     {project.name}
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-600 dark:text-[#888888]">

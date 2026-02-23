@@ -8,6 +8,7 @@ export const toolsData = [
     { name: "ChatGPT", description: "Brainstorming, Coding assistant.", class: "chatgpt" },
     { name: "Figma", description: "For UI/UX Designs.", class: "figma" },
     { name: "ClickUp", description: "For project management, organizing workflow and task.", class: "clickup" },
+    { name: "MSTeams", description: "For contact and communication.", class: "teams" },
     { name: "Vercel", description: "For deployment testing.", class: "vercel" },
     { name: "Hostinger", description: "For hosting web applications.", class: "hostinger" }
 ];

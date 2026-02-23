@@ -21,7 +21,7 @@ export default function ExperienceTimeline() {
                 <div className="absolute left-[-20.5px] sm:left-[-28.5px] top-[26px] w-2.5 h-2.5 rounded-full bg-white dark:bg-[#1a1a1a] border-2 border-gray-200 dark:border-white/10 group-hover:border-[#ff4500] group-hover:scale-125 transition-all duration-300 z-10 shadow-[0_0_0_4px_white] dark:shadow-[0_0_0_4px_#0a0a0a]" />
 
                 <div className="flex flex-col gap-1 relative z-10">
-                  <h3 className="text-base font-semibold text-gray-900 dark:text-white group-hover:text-[#ff4500] transition-colors duration-200">
+                  <h3 className="text-base font-semibold text-gray-900 dark:text-white group-hover:text-[#ff4500] dark:group-hover:text-[#ff4500] transition-colors duration-200">
                     {exp.title}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-[#888888]">
@@ -34,7 +34,7 @@ export default function ExperienceTimeline() {
                   >
                     {exp.date}
                   </span>
-                  <span className="inline-flex items-center gap-[0.375rem] px-2 py-0.5 rounded-full border border-black/5 dark:border-white/7 text-[0.6rem] font-semibold tracking-wider uppercase text-gray-500 dark:text-[#888888] bg-transparent group-hover:border-[#ff4500]/30 group-hover:text-[#ff4500]/90 transition-all duration-300">
+                  <span className="inline-flex items-center gap-[0.375rem] px-2 py-0.5 rounded-full border border-black/5 dark:border-white/7 text-[0.6rem] font-semibold tracking-wider uppercase text-gray-500 dark:text-[#888888] bg-transparent group-hover:border-[#ff4500]/30 group-hover:text-[#ff4500]/90 dark:group-hover:text-[#ff4500]/90 transition-all duration-300">
                     {exp.type}
                   </span>
                 </div>

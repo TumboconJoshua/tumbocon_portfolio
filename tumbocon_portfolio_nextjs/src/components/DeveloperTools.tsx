@@ -42,6 +42,7 @@ export default function DeveloperTools() {
       chatgpt: "chatgpt.png",
       figma: "figma.png",
       clickup: "clickup.png",
+      teams: "MSTeams.png",
       vercel: "Vercel_favicon.svg",
       hostinger: "hostinger.png",
     };
@@ -72,7 +73,7 @@ export default function DeveloperTools() {
                   </div>
                 )}
                 
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-[#ff4500] transition-colors duration-200 font-mono relative z-10">
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-[#ff4500] dark:group-hover:text-[#ff4500] transition-colors duration-200 font-mono relative z-10">
                   <ScrambledTitle title={tool.name} />
                 </h3>
                 <p className="text-xs leading-relaxed relative z-10 text-gray-500 dark:text-[#555555]">

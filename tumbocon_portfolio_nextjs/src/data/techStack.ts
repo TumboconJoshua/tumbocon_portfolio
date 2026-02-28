@@ -1,7 +1,7 @@
 export const techStackData = [
     {
         category: "Frontend",
-        items: ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Vue.js", "Angular.js", "Tailwind CSS", "Vite", "Prettier", "ESLint"]
+        items: ["HTML", "CSS", "JavaScript", "TypeScript", "React JS", "Vue JS", "Next JS", "Angular JS", "Tailwind CSS", "Vite", "Prettier", "ESLint"]
     },
     {
         category: "Backend",

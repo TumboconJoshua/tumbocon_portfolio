@@ -6,6 +6,12 @@ export const projectsData = [
         isSlideshow: true
     },
     {
+        name: "VeriPy",
+        href: "https://research-rag-delta.vercel.app",
+        techTags: "Python-FastAPI, Next JS, Convex, Gemini, RAG ",
+        isSlideshow: true
+    },
+    {
         name: "HSC-MAS Management System",
         href: "https://mas-hsc.vercel.app/",
         techTags: "TypeScript, Next JS, Tailwind-CSS, Supabase"

@@ -27,7 +27,7 @@ export default function LatestProjects() {
                     {project.name}
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-600 dark:text-[#888888]">
-                    {project.techTags.split(',')[0].trim()} — {project.techTags.split(',').slice(1, 3).join(', ').trim()}
+                    {project.techTags.split(',')[0].trim()} — {project.techTags.split(',').slice(1, 4).join(', ').trim()}
                   </p>
                 </div>
                 <div className="flex items-center justify-between">

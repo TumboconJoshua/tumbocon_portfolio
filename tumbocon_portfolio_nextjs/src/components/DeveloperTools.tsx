@@ -59,7 +59,7 @@ export default function DeveloperTools() {
             return (
               <div
                 key={index}
-                className="bg-white dark:bg-[#111111] border border-black/5 dark:border-white/7 rounded-[1.25rem] p-5 flex flex-col gap-1 group cursor-default relative overflow-hidden transition-all duration-200 hover:bg-gray-50 dark:hover:bg-[#161616] hover:border-black/10 dark:hover:border-white/14 shadow-sm dark:shadow-none"
+                className="bg-white/70 dark:bg-[#18181B]/60 backdrop-blur-md border border-white/40 dark:border-white/10 rounded-[1.25rem] p-5 flex flex-col gap-1 group cursor-default relative overflow-hidden transition-all duration-200 hover:bg-white/80 dark:hover:bg-[#18181B]/80 hover:border-white/60 dark:hover:border-white/20 shadow-lg dark:shadow-md"
               >
                 {/* Background Icon */}
                 {iconPath && (
@@ -73,10 +73,10 @@ export default function DeveloperTools() {
                   </div>
                 )}
                 
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-[#ff4500] dark:group-hover:text-[#ff4500] transition-colors duration-200 font-mono relative z-10">
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-[#2563EB] dark:group-hover:text-[#3B82F6] transition-colors duration-200 font-mono relative z-10">
                   <ScrambledTitle title={tool.name} />
                 </h3>
-                <p className="text-xs leading-relaxed relative z-10 text-gray-500 dark:text-[#555555]">
+                <p className="text-xs leading-relaxed relative z-10 text-gray-500 dark:text-[#A1A1AA]">
                   {tool.description}
                 </p>
               </div>

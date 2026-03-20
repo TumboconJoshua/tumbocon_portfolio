@@ -29,17 +29,17 @@ export default function Footer() {
       <div className="flex flex-col gap-6 pt-4">
         {/* CTA Card */}
         <div
-          className="bg-white dark:bg-[#111111] border border-black/5 dark:border-white/7 rounded-[1.25rem] p-10 sm:p-14 flex flex-col items-center text-center gap-6 transition-all hover:border-black/10 dark:hover:bg-[#161616] dark:hover:border-white/14 shadow-sm dark:shadow-none"
+          className="bg-white/70 dark:bg-[#18181B]/60 backdrop-blur-md border border-white/40 dark:border-white/10 rounded-[1.25rem] p-10 sm:p-14 flex flex-col items-center text-center gap-6 transition-all hover:bg-white/80 dark:hover:bg-[#18181B]/80 hover:border-white/60 dark:hover:border-white/20 shadow-xl dark:shadow-md"
         >
-          <p className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-gray-500 dark:text-[#555555]">
+          <p className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-gray-500 dark:text-[#A1A1AA]">
             Let&apos;s Work Together
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white max-w-xl leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white max-w-xl leading-tight font-[family-name:var(--font-archivo)]">
             Have a project in mind? Let&apos;s build it together.
           </h2>
           <a
             href="mailto:tumboconjoshua26@gmail.com"
-            className="px-8 py-3 rounded-full text-sm font-bold bg-gray-900 text-white dark:bg-white dark:text-black hover:bg-[#ff4500] dark:hover:bg-[#ff4500] dark:hover:text-white transition-colors duration-200 mt-2 shadow-sm"
+            className="px-8 py-3 rounded-full text-sm font-bold bg-[#2563EB] text-white hover:bg-[#1D4ED8] transition-colors duration-200 mt-2 shadow-md hover:shadow-lg"
           >
             Get in touch
           </a>
@@ -47,15 +47,15 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 pb-8 border-t border-black/5 dark:border-white/7"
+          className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 pb-8 border-t border-black/5 dark:border-white/10"
         >
           <div className="flex flex-col gap-1 text-center sm:text-left">
-            <span className="text-xs text-gray-500 dark:text-[#555555]">
-              Local time · <span className="text-gray-600 dark:text-[#888888]">{time}</span>
+            <span className="text-xs text-gray-500 dark:text-[#A1A1AA]">
+              Local time · <span className="text-gray-600 dark:text-[#E4E4E7]">{time}</span>
             </span>
           </div>
 
-          <span className="text-[0.65rem] font-medium text-gray-500 dark:text-[#555555] text-center sm:text-center">
+          <span className="text-[0.65rem] font-medium text-gray-500 dark:text-[#A1A1AA] text-center sm:text-center">
             © 2026 Joshua Tumbocon. All Rights Reserved.
           </span>
 

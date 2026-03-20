@@ -5,11 +5,11 @@ export const techStackData = [
     },
     {
         category: "Backend",
-        items: ["PHP", "Python", "Java", "Node.js", "Laravel", "Express.js","FastAPI", "OAuth", "JWT", "REST"]
+        items: ["PHP", "Python", "Java", "Node.js", "Laravel", "Express.js","FastAPI","Supabase","Firebase","Convex", "OAuth", "JWT", "REST"]
     },
     {
         category: "Database",
-        items: ["MySQL", "MongoDB", "PostgreSQL","Supabase","Firebase","Convex"]
+        items: ["MySQL", "MongoDB", "PostgreSQL"]
     },
     {
         category: "AI & Machine Learning",

@@ -81,7 +81,7 @@ export default function ChatWidget() {
           className={`relative flex items-center justify-center w-14 h-14 rounded-full bg-[#2563EB] text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ${isOpen ? "rotate-90 scale-90 opacity-0 pointer-events-none" : "rotate-0 scale-100 opacity-100"}`}
           aria-label="Open AI Chat"
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6"/>
           <span className="absolute top-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#18181B] rounded-full animate-pulse"></span>
         </button>
 
@@ -114,7 +114,7 @@ export default function ChatWidget() {
           </div>
 
           {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 scrollbar-thin scrollbar-thumb-gray-200 dark:scrollbar-thumb-gray-800">
+          <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 flex flex-col gap-4 scrollbar-thin scrollbar-thumb-gray-200 dark:scrollbar-thumb-gray-800">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
@@ -123,7 +123,7 @@ export default function ChatWidget() {
                 <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${msg.role === "user" ? "bg-gray-200 dark:bg-zinc-700 text-gray-600 dark:text-white" : msg.role === "error" ? "bg-red-100 text-red-500" : "bg-[#2563EB] text-white"}`}>
                   {msg.role === "user" ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                 </div>
-                <div className={`p-3 rounded-[1.25rem] text-sm leading-relaxed ${msg.role === "user" ? "bg-gray-100 dark:bg-zinc-800 text-gray-800 dark:text-gray-100 rounded-tr-sm" : msg.role === "error" ? "bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/50" : "bg-[#2563EB] text-white rounded-tl-sm shadow-md"}`}>
+                <div className={`p-3 rounded-[1.25rem] text-sm leading-relaxed whitespace-pre-wrap break-words overflow-hidden ${msg.role === "user" ? "bg-gray-100 dark:bg-zinc-800 text-gray-800 dark:text-gray-100 rounded-tr-sm" : msg.role === "error" ? "bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/50" : "bg-[#2563EB] text-white rounded-tl-sm shadow-md"}`}>
                   {msg.content}
                 </div>
               </div>
